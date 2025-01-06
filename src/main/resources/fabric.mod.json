@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "nbtgrabber2",
+  "version": "${version}",
+  "name": "nbtgrabber2",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/nbtgrabber2/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "org.main.nbtgrabber2.client.Nbtgrabber2Client"
+    ],
+    "main": [
+      "org.main.nbtgrabber2.Nbtgrabber2"
+    ]
+  },
+  "mixins": [
+    "nbtgrabber2.mixins.json",
+    {
+      "config": "nbtgrabber2.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
